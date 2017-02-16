@@ -17,11 +17,12 @@
   </div>
 
   <div class="field">
-    <%= f.label :image %>
-    <%= f.text_field :image %>
+    <%= f.label :image, class: 'custom-file' %><br />
+    <%= f.file_field :image, class: 'btn btn-primary', id: 'file' %>
+    <span class="custom-file-control"></span>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Add Photo", class: "btn btn-primary" %>
   </div>
 <% end %>

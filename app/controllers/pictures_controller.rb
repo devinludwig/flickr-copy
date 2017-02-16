@@ -25,7 +25,7 @@ class PicturesController < ApplicationController
   # POST /pictures
   # POST /pictures.json
   def create
-    @picture = Picture.new(picture_params)
+    @picture = current_user.pictures.new(picture_params)
 
     respond_to do |format|
       if @picture.save
